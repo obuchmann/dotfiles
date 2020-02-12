@@ -5,6 +5,7 @@ maybe something from there: https://github.com/paulmillr/dotfiles
 
 ## Todos
 
+- [ ] Git config incl. Credentials Cache
 - [ ] Docker
 - [ ] Docker dev environment
 - [ ] [Oh my ZSH?](https://ohmyz.sh/)
