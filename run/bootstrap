@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+##################################################
+# Ubuntu installer Helper
+# Authtor: Oliver Buchmann <o.buch91@gmail.com>
+##################################################
+
+set -e
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+
+declare -a packages=(
+	base
+	dev
+)	
+
+for package in "${packages[@]}"; do
+
+	if [ -f "$DIR/$package/bootstrap.sh" ]; then
+		echo "Running bootstraper for package $package"
+		bash -c "$DIR/$package/bootstrap.sh"
+	fi
+
+done
